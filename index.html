@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>To do list</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+  </head>
+  <body>
+    <div class="container">
+      <h2>To-Do-List</h2>
+
+      <div class="color-mode">
+        <!-- <div class="colors">
+          <div class="theme-selector circle"></div>
+          <div class="theme-selector circle"></div>
+          <div class="theme-selector circle"></div>
+          <div class="theme-selector circle"></div>
+          <div class="theme-selector circle"></div>
+        </div> -->
+        <button onclick="toggle" class="toggle-mode">
+          <i class="fa-solid fa-moon"></i>
+        </button>
+      </div>
+
+      <div class="input-section">
+        <input type="text" class="task-input" placeholder="Add new task" />
+        <button class="btn">+ Add</button>
+      </div>
+
+      <div class="time-section">
+        <div class="date">
+          <input type="" class="date-input" />
+          <i class="fa-regular fa-calendar"></i>
+        </div>
+        <div class="time">
+          <input type="text" class="time-input" />
+          <i class="fa-regular fa-clock"></i>
+        </div>
+      </div>
+
+      <div class="task-update-section">
+        <div class="task-number">0 tasks</div>
+        <div class="completed-task">0 completed</div>
+      </div>
+
+      <div class="nav">
+        <ul>
+          <li><button class="tab all onair">All</button></li>
+          <li><button class="tab active">Active</button></li>
+          <li><button class="tab complete">completed</button></li>
+        </ul>
+      </div>
+
+      <div class="task-list">
+        <!-- <div class="task">
+          <input type="checkbox" name="" id="" />
+          <div class="task-info">
+            <p class="task-title">Hello</p>
+            <p class="task-time">
+              <i class="fa-solid fa-calendar-days"></i> Fri, June at 12:50
+            </p>
+          </div>
+          <div class="task-action">
+            <div class="task-complete"><i class="fa-solid fa-check"></i></div>
+            <div class="task-delete"><i class="fa-solid fa-trash"></i></div>
+          </div>
+        </div> -->
+      </div>
+
+      <div class="priority">
+        <p>Priority</p>
+        <div class="high circle activePryo"></div>
+        <div class="medium circle"></div>
+        <div class="normal circle"></div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
