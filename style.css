@@ -1,3 +1,14 @@
+:root {
+  --primary-color: #e5eaed;
+  --secondery-color: #f4f9fc;
+  --task-color: white;
+}
+
+.dark-mode {
+  --primary-color: #212529;
+  --secondery-color: #272b2f;
+  --task-color: #212529;
+}
 body {
   margin: 0;
   display: flex;
@@ -5,7 +16,7 @@ body {
   justify-content: center;
   height: auto;
   align-items: center;
-  background-color: #e5eaed;
+  background-color: var(--primary-color);
   color: #707576;
   font-family: "Poppins", sans-serif;
 }
@@ -19,26 +30,14 @@ h2 {
   position: relative;
   top: 50px;
   width: 500px;
-  background-color: #f4f9fc;
+  background-color: var(--secondery-color);
   border-radius: 15px;
   text-align: center;
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.05);
   padding: 24px;
   margin: 12px;
 }
-/* .color-mode {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  padding: 12px;
-}
 
-.colors {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  gap: 8px;
-} */
 .circle {
   height: 30px;
   width: 30px;
@@ -58,6 +57,12 @@ h2 {
   background-color: white;
   box-shadow: 2px 4px 12px rgba(0, 0, 0, 0.2);
   cursor: pointer;
+  transition: 300ms;
+}
+
+.toggle-mode:hover {
+  transform: scale(1.1);
+  box-shadow: 2px 4px 12px rgba(0, 0, 0, 0.7);
 }
 
 .input-section {
@@ -186,10 +191,6 @@ h2 {
     width 400ms,
     left 400ms;
 }
-/* .active:hover::after {
-  width: 60%;
-  left: 50%;
-} */
 
 .task-list {
   display: flex;
@@ -200,12 +201,15 @@ h2 {
 .task {
   display: flex;
   flex-direction: row;
-  background-color: white;
+  background-color: var(--task-color);
   border-radius: 10px;
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.18);
   align-items: center;
 }
 
+.task-dark-mode {
+  background-color: #212529;
+}
 .task input {
   transform: scale(1.4);
   margin: 14px;
@@ -246,7 +250,7 @@ h2 {
   transition: color 300ms;
 }
 .task-delete:hover {
-  color: mediumseagreen;
+  color: lightcoral;
 }
 
 .green {

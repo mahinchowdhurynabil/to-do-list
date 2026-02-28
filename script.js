@@ -4,6 +4,19 @@ const taskList = document.querySelector(".task-list");
 
 const dateEl = document.querySelector(".date-input");
 const timeEl = document.querySelector(".time-input");
+const toggleMode = document.querySelector(".toggle-mode");
+
+toggleMode.onclick = function () {
+  const moon = document.querySelector(".moon");
+  document.body.classList.toggle("dark-mode");
+  if (document.body.classList.contains("dark-mode")) {
+    moon.classList.remove(`fa-moon`);
+    moon.classList.add(`fa-sun`);
+  } else {
+    moon.classList.remove(`fa-sun`);
+    moon.classList.add(`fa-moon`);
+  }
+};
 
 const months = [
   "January",
@@ -173,8 +186,6 @@ function renderTask(render) {
       localStorage.setItem("tasks", JSON.stringify(taskObj));
       updateView();
     });
-
-    console.log(taskObj[index].completed);
   });
 
   const taskNumber = document.querySelector(".task-number");
@@ -230,5 +241,3 @@ function getTask() {
 }
 
 updateView();
-
-console.log("taskObj", taskObj);
