@@ -94,6 +94,11 @@ h2 {
   width: 100%;
   justify-content: space-between;
   padding-block: 8px 4px;
+
+  @media (max-width: 840px) {
+    flex-direction: column;
+    gap: 8px;
+  }
 }
 .time-section i {
   color: #707576;
@@ -102,7 +107,7 @@ h2 {
   position: relative;
 }
 .date > input {
-  width: 230px;
+  width: 100%;
   height: 32px;
   background-color: #e9edf1;
   border: none;
